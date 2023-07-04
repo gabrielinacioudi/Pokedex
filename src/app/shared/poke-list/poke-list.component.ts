@@ -11,6 +11,7 @@ export class PokeListComponent implements OnInit {
 
   getAllPokemons: any;
 
+
   constructor(
     private pokeApiService: PokeApiService
   ){}
@@ -23,4 +24,11 @@ export class PokeListComponent implements OnInit {
       }
     );
   }
+
+  public getSearch(value: string){
+    const filter = this.getAllPokemons.filter((res: any) => {
+      return !res.name.indexOf(value.toLocaleLowerCase());  
+    } );
+  }
 }
+
