@@ -11,7 +11,6 @@ export class PokeSearchComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    
   }
 
   public search(value: string) {
@@ -19,4 +18,5 @@ export class PokeSearchComponent implements OnInit {
   }
 
 }
+
 
